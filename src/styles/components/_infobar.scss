@@ -1,0 +1,39 @@
+.infobar {
+    padding: 16px 24px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+            color: #000;
+
+            b {
+                display: block;
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        display: block;
+
+        &__info {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__info {
+            gap: 16px;
+        }
+    }
+}
