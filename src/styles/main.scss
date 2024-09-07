@@ -1,4 +1,6 @@
+@use 'vars';
 @use 'hero';
+@use 'event';
 @use './components/infobar';
 @use './components/button';
 
@@ -11,7 +13,7 @@
 }
 
 body {
-    color: #fff;
+    color: vars.$color-text-primary;
 }
 
 .container {
@@ -19,11 +21,11 @@ body {
     width: 100%;
     margin: 0 auto;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: vars.$bp-mobile) {
         max-width: 80%;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: vars.$bp-tablet) {
         max-width: 90%;
     }
 }

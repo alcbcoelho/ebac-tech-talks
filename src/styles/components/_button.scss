@@ -1,3 +1,5 @@
+@use '../vars';
+
 .button {
     padding: 12px;
     font-size: 18px;
@@ -7,8 +9,8 @@
     white-space: nowrap;
     
     &--primary {
-        color: #fff;
-        background-color: #4f2ac3;
+        color: vars.$color-text-primary;
+        background-color: vars.$color-button-primary;
     }
 
     // @media screen and (max-width: 640px) {
@@ -16,7 +18,7 @@
     //     width: 100%;
     // }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: vars.$bp-tablet) {
         display: flex;
         align-items: center;
         justify-content: center;

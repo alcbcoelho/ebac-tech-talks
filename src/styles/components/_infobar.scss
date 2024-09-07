@@ -1,6 +1,8 @@
+@use '../vars';
+
 .infobar {
     padding: 16px 24px;
-    background-color: #fff;
+    background-color: vars.$color-background;
     display: flex;
     justify-content: space-between;
 
@@ -10,7 +12,7 @@
 
         &__item {
             font-size: 14px;
-            color: #000;
+            color: vars.$color-text-secondary;
 
             b {
                 display: block;
@@ -19,7 +21,7 @@
         }
     }
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: vars.$bp-mobile) {
         display: block;
 
         &__info {
@@ -31,7 +33,7 @@
         }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: vars.$bp-tablet) {
         &__info {
             gap: 16px;
         }
